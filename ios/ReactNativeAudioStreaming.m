@@ -114,6 +114,11 @@ RCT_EXPORT_METHOD(seekToTime:(double) seconds)
    [self.audioPlayer seekToTime:seconds];
 }
 
+RCT_EXPORT_METHOD(setMuted: (BOOL)isMuted)
+{
+   self.audioPlayer.muted = isMuted;
+}
+
 RCT_EXPORT_METHOD(goForward:(double) seconds)
 {
    if (!self.audioPlayer) {
