@@ -1,5 +1,5 @@
-#import <React/RCTBridgeModule.h>
-#import <React/RCTEventDispatcher.h>
+#import "RCTBridgeModule.h"
+#import "RCTEventDispatcher.h"
 
 #import "ReactNativeAudioStreaming.h"
 
@@ -23,7 +23,13 @@ RCT_EXPORT_MODULE()
    self = [super init];
    if (self) {
       [self setSharedAudioSessionCategory];
-      self.audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){ .flushQueueOnSeek = YES }];
+      
+      STKAudioPlayerOptions audioOptions;
+      memset(&audioOptions, 0, sizeof(audioOptions));
+      audioOptions.enableVolumeMixer = YES;
+      audioOptions.flushQueueOnSeek = YES;
+      self.audioPlayer = [[STKAudioPlayer alloc] initWithOptions:audioOptions];
+
       [self.audioPlayer setDelegate:self];
       self.lastUrlString = @"";
       [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
