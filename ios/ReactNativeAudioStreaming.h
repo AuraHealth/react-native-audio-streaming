@@ -4,6 +4,8 @@
 #import "RCTBridgeModule.h"
 #import "STKAudioPlayer.h"
 
+extern NSString *ReactNativeAudioStreamingStoppedNotification;
+
 @interface ReactNativeAudioStreaming : NSObject <RCTBridgeModule, STKAudioPlayerDelegate>
 
 @property (nonatomic, strong) STKAudioPlayer *audioPlayer;

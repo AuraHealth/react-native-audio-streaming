@@ -8,6 +8,8 @@
 @import AVFoundation;
 @import MediaPlayer;
 
+static NSString *ReactNativeAudioStreamingStoppedNotification = @"ReactNativeAudioStreamingStoppedNotification";
+
 @implementation ReactNativeAudioStreaming
 
 @synthesize bridge = _bridge;
@@ -255,6 +257,7 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
       case STKAudioPlayerStateStopped:
          [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent"
                                                          body:@{@"status": @"STOPPED", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
+         [[NSNotificationCenter defaultCenter] postNotificationName:ReactNativeAudioStreamingStoppedNotification object:nil];
          break;
          
       case STKAudioPlayerStateBuffering:
