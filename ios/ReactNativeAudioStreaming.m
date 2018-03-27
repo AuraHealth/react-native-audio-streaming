@@ -8,7 +8,7 @@
 @import AVFoundation;
 @import MediaPlayer;
 
-static NSString *ReactNativeAudioStreamingStoppedNotification = @"ReactNativeAudioStreamingStoppedNotification";
+NSString *ReactNativeAudioStreamingStoppedNotification = @"ReactNativeAudioStreamingStoppedNotification";
 
 @implementation ReactNativeAudioStreaming
 
