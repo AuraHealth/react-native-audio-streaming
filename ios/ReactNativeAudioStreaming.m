@@ -258,7 +258,6 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
          [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent"
                                                          body:@{@"status": @"STOPPED", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
          [[NSNotificationCenter defaultCenter] postNotificationName:ReactNativeAudioStreamingStoppedNotification object:nil];
-         
          break;
          
       case STKAudioPlayerStateBuffering:
