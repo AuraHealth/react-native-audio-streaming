@@ -1,11 +1,44 @@
 {
-  "name": "react-native-audio-streaming",
-  "version": "2.3.2",
-  "description": "React native audio streaming library for android and iOS",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:tlenclos/react-native-audio-streaming.git"
+  "_from": "github:aurahealth/react-native-audio-streaming",
+  "_id": "react-native-audio-streaming@2.3.2",
+  "_inBundle": false,
+  "_integrity": "sha1-eqVBQ1DEc48vNPYemJ2+4zz5Ux0=",
+  "_location": "/react-native-audio-streaming",
+  "_phantomChildren": {
+    "fbjs": "0.8.16"
   },
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-audio-streaming@github:aurahealth/react-native-audio-streaming",
+    "name": "react-native-audio-streaming",
+    "escapedName": "react-native-audio-streaming",
+    "rawSpec": "github:aurahealth/react-native-audio-streaming",
+    "saveSpec": "github:aurahealth/react-native-audio-streaming",
+    "fetchSpec": null,
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:aurahealth/react-native-audio-streaming#bd7507dd96a11fc1cd8d5e32d29d5342b176e5e5",
+  "_spec": "react-native-audio-streaming@github:aurahealth/react-native-audio-streaming",
+  "_where": "/Users/sitefeng/Documents/aura_health/Aura",
+  "author": {
+    "name": "Thibault Lenclos"
+  },
+  "bugs": {
+    "url": "https://github.com/tlenclos/react-native-audio-streaming/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
+  "deprecated": false,
+  "description": "React native audio streaming library for android and iOS",
+  "devDependencies": {
+    "react-native": ">=0.31.0"
+  },
+  "homepage": "https://github.com/tlenclos/react-native-audio-streaming#readme",
   "keywords": [
     "react-native",
     "audio streaming",
@@ -14,19 +47,18 @@
     "web radio",
     "player"
   ],
-  "author": "Thibault Lenclos",
   "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Not test yet sadly :(\" && exit 0"
-  },
+  "name": "react-native-audio-streaming",
   "peerDependencies": {
     "react-native": ">=0.31.0"
   },
-  "devDependencies": {
-    "react-native": ">=0.31.0"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tlenclos/react-native-audio-streaming.git"
   },
-  "dependencies": {
-    "prop-types": "^15.5.10"
-  }
+  "scripts": {
+    "test": "echo \"Not test yet sadly :(\" && exit 0"
+  },
+  "version": "2.3.2"
 }
